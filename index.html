@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fuego Dracónico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family: Arial; text-align:center; padding:20px; background:#0f0f0f; color:white;">
+
+  <h1>🔥 Collar Fuego Dracónico</h1>
+
+  <img src="https://via.placeholder.com/300" width="80%" style="border-radius:10px;">
+
+  <p><s style="color:gray;">S/159</s> <strong style="color:red; font-size:22px;">S/99</strong></p>
+
+  <p>Diseño imponente. Acero inoxidable. No se oxida.</p>
+
+  <p><strong>Envíos:</strong><br>
+  Lima: Delivery S/10<br>
+  Provincia: Adelanto S/20 (Shalom / Olva)</p>
+
+  <button onclick="confirmar()" style="padding:15px; font-size:16px; background:red; color:white; border:none; border-radius:8px;">
+    Pedir por WhatsApp
+  </button>
+
+<script>
+function confirmar() {
+  let respuesta = confirm("¿Leíste todos los detalles de la pieza?");
+  if (respuesta) {
+    window.location.href = "https://wa.me/51999999999?text=Hola,%20quiero%20el%20Fuego%20Dracónico%20en%20oferta";
+  } else {
+    window.scrollTo(0,0);
+  }
+}
+</script>
+
+</body>
+</html>
