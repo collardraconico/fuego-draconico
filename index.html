@@ -1,35 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fuego Dracónico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuego Dracónico</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0f0f0f;
+  color:white;
+  text-align:center;
+}
+.container{
+  max-width:500px;
+  margin:auto;
+  padding:15px;
+}
+.logo{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#ccc;
+}
+h1{
+  font-size:22px;
+}
+.main-img{
+  width:100%;
+  border-radius:10px;
+}
+.thumbs img{
+  width:30%;
+  margin:5px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.promo{
+  background:red;
+  padding:8px;
+  font-weight:bold;
+  margin-top:20px;
+}
+.price s{
+  color:gray;
+}
+.price strong{
+  color:#00ff88;
+  font-size:24px;
+}
+.btn{
+  background:red;
+  padding:15px;
+  border:none;
+  color:white;
+  font-size:16px;
+  border-radius:10px;
+  margin-top:15px;
+  width:100%;
+}
+.section{
+  margin-top:25px;
+  text-align:left;
+}
+.section h3{
+  text-align:center;
+}
+.footer{
+  margin-top:40px;
+  font-size:12px;
+  color:#aaa;
+}
+</style>
+
 </head>
 
-<body style="font-family: Arial; text-align:center; padding:20px; background:#0f0f0f; color:white;">
+<body>
 
-  <h1>🔥 Collar Fuego Dracónico</h1>
+<div class="container">
 
-  <img src="https://via.placeholder.com/300" width="80%" style="border-radius:10px;">
+<div class="logo">
+🔥 Guía Dracónica | Joyería de Dragones
+</div>
 
-  <p><s style="color:gray;">S/159</s> <strong style="color:red; font-size:22px;">S/99</strong></p>
+<h1>Collar Fuego Dracónico</h1>
 
-  <p>Diseño imponente. Acero inoxidable. No se oxida.</p>
+<img id="mainImage" src="https://via.placeholder.com/400" class="main-img">
 
-  <p><strong>Envíos:</strong><br>
-  Lima: Delivery S/10<br>
-  Provincia: Adelanto S/20 (Shalom / Olva)</p>
+<div class="thumbs">
+<img src="https://via.placeholder.com/400" onclick="cambiar(this)">
+<img src="https://via.placeholder.com/401" onclick="cambiar(this)">
+<img src="https://via.placeholder.com/402" onclick="cambiar(this)">
+</div>
 
-  <button onclick="confirmar()" style="padding:15px; font-size:16px; background:red; color:white; border:none; border-radius:8px;">
-    Pedir por WhatsApp
-  </button>
+<div class="promo">EN PROMOCIÓN</div>
+
+<div class="price">
+<p>Collar FUEGO DRACÓNICO</p>
+<s>S/74</s><br>
+<strong>S/55 OFERTA</strong>
+</div>
+
+<div class="section">
+<h3>MATERIAL</h3>
+<p>Acero inoxidable grado 316L</p>
+</div>
+
+<div class="section">
+<h3>BENEFICIOS</h3>
+<p>
+✔ Resistente a rayaduras<br>
+✔ No se oxida ni decolora<br>
+✔ Uso diario<br>
+✔ Puede mojarse<br>
+✔ Energía positiva<br>
+✔ Garantía de por vida
+</p>
+</div>
+
+<div class="section">
+<h3>¿QUÉ INCLUYE?</h3>
+<p>
+• Cadena personalizada<br>
+• Dije original<br>
+• Estuche<br>
+• Bolsa de marca<br>
+• Bono de descuento
+</p>
+</div>
+
+<div class="section">
+<h3>ENVÍOS</h3>
+<p>
+Lima: Delivery S/10<br>
+Provincia: Shalom / Olva (2 días)
+</p>
+</div>
+
+<div class="section">
+<h3>PAGO</h3>
+<p>
+Lima: Contra entrega (adelanto delivery)<br>
+Provincia: Adelanto mínimo S/20
+</p>
+</div>
+
+<div class="section">
+<h3>ADELANTO (YAPE)</h3>
+<p>Escanea el QR o usa el número:</p>
+<img src="https://via.placeholder.com/200">
+<p>999 999 999</p>
+
+<button class="btn" onclick="confirmar()">Enviar comprobante por WhatsApp</button>
+</div>
+
+<div class="footer">
+Somos Guía Dracónica. Joyería de Dragones.<br><br>
+
+Facebook:<br>
+https://web.facebook.com/guiadraconica<br><br>
+
+TikTok:<br>
+https://www.tiktok.com/@guiadraconicaperu<br><br>
+
+© 2026 Todos los derechos reservados
+</div>
+
+</div>
 
 <script>
-function confirmar() {
-  let respuesta = confirm("¿Leíste todos los detalles de la pieza?");
-  if (respuesta) {
-    window.location.href = "https://wa.me/51999999999?text=Hola,%20quiero%20el%20Fuego%20Dracónico%20en%20oferta";
-  } else {
-    window.scrollTo(0,0);
+function cambiar(img){
+  document.getElementById("mainImage").src = img.src;
+}
+
+function confirmar(){
+  let r = confirm("¿Leíste todos los detalles antes de ir a WhatsApp?");
+  if(r){
+    window.location.href="https://wa.me/51999999999?text=Hola,%20quiero%20el%20Fuego%20Dracónico";
+  }else{
+    window.scrollTo({top:0, behavior:'smooth'});
   }
 }
 </script>
