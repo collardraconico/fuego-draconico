@@ -69,7 +69,7 @@ h1{
 }
 .btn{
   width:100%;
-  background:red;
+  background:#25D366;
   color:white;
   padding:15px;
   border:none;
@@ -142,27 +142,33 @@ h1{
 </div>
 
 <div class="section">
-<h3>ENVÍOS</h3>
-<p>
-Lima: Delivery S/10<br>
-Provincia: Shalom / Olva (2 días)
-</p>
-</div>
+<h3>ENVÍOS Y PAGOS</h3>
 
-<div class="section">
-<h3>PAGO</h3>
 <p>
-Lima: Contra entrega<br>
-Provincia: Adelanto S/20
+<b>Si eres de Lima:</b><br>
+Solo adelantas el coste de delivery: <b>S/10</b>.<br>
+El resto del pago se completa al motorizado una vez confirmada la entrega 👍
 </p>
+
+<br>
+
+<p>
+<b>Si eres de Provincia:</b><br>
+Los envíos se realizan mediante Shalom u Olva Courier.<br>
+(Tiempo aproximado: 2 días)<br><br>
+
+El adelanto es únicamente de <b>S/20</b>.<br>
+El resto se completa cuando recojas tu producto para brindarte tu clave de liberación.
+</p>
+
 </div>
 
 <div class="section">
 <h3>ADELANTO (YAPE)</h3>
-<img src="QRYAPE.jpeg"><br>
+<img src="QRYAPE.jpeg" style="width:180px; border-radius:10px;"><br>
 <p>947 786 855</p>
 
-<button class="btn" onclick="confirmar()">Enviar comprobante por WhatsApp</button>
+<button class="btn" onclick="confirmar()">Enviar comprobante y contactar 💬 con Guía Dracónica por WhatsApp</button>
 </div>
 
 <div class="footer">
@@ -185,9 +191,9 @@ function cambiar(img){
 }
 
 function confirmar(){
-  let r = confirm("¿Leíste todos los detalles?");
+  let r = confirm("¿Leíste todos los detalles de la promoción?😊 ");
   if(r){
-    window.location.href="https://wa.me/51999999999?text=Hola,%20quiero%20el%20Fuego%20Dracónico";
+    window.location.href="https://wa.link/x4ea5q";
   }else{
     window.scrollTo({top:0, behavior:'smooth'});
   }
