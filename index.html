@@ -5,6 +5,7 @@
 <title>Fuego Dracónico</title>
 
 <style>
+
 body{
   margin:0;
   font-family: Arial;
@@ -52,6 +53,11 @@ h1{
   cursor:pointer;
   object-fit:cover;
   height:90px;
+  transition:0.2s;
+}
+
+.thumbs img:hover{
+  transform:scale(1.03);
 }
 
 .promo{
@@ -96,24 +102,70 @@ h1{
   width:100%;
   background:#25D366;
   color:white;
-  padding:15px;
+  padding:16px;
   border:none;
-  border-radius:10px;
-  font-size:16px;
+  border-radius:12px;
+  font-size:17px;
   margin-top:15px;
   cursor:pointer;
+  font-weight:bold;
+
+  animation:pulse 1.8s infinite;
+
+  box-shadow:
+  0 0 10px rgba(37,211,102,0.5),
+  0 0 25px rgba(37,211,102,0.3);
+
+  transition:0.2s;
+}
+
+.btn:hover{
+  transform:scale(1.02);
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.03);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
 }
 
 .footer{
   margin-top:40px;
   font-size:12px;
   color:#aaa;
+  text-align:center;
 }
 
 a{
   color:#00aaff;
   text-decoration:none;
 }
+
+.video-box{
+  display:flex;
+  justify-content:center;
+  margin-top:25px;
+}
+
+.video-box video{
+  width:150px;
+  border-radius:14px;
+
+  box-shadow:
+  0 0 15px rgba(255,80,0,0.5);
+
+}
+
 </style>
 
 </head>
@@ -123,11 +175,14 @@ a{
 <div class="container">
 
 <div class="header">
+
 <img src="logo1.jpg">
+
 <div>
 Guía Dracónica<br>
 <small>Joyería de Dragones</small>
 </div>
+
 </div>
 
 <h1>Collar de Fuego Dracónico</h1>
@@ -135,11 +190,13 @@ Guía Dracónica<br>
 <img id="mainImage" src="Fuego1.jpg" class="main-img">
 
 <div class="thumbs">
+
 <img src="Fuego1.jpg" onclick="cambiar(this)">
 <img src="Fuego3.jpg" onclick="cambiar(this)">
 <img src="Fuego4.jpg" onclick="cambiar(this)">
 <img src="Fuego5.jpg" onclick="cambiar(this)">
 <img src="Fuego2.jpg" onclick="cambiar(this)">
+
 </div>
 
 <div class="promo">
@@ -147,20 +204,24 @@ PROMOCIÓN POR TIEMPO LIMITADO
 </div>
 
 <div class="price">
+
 <p><b>Collar FUEGO DRACÓNICO</b></p>
 
 <s>S/69 ANTES</s><br>
 
 <strong>s/49 OFERTA🔥🐉</strong>
+
 </div>
 
 <div class="section">
+
 <h3>MATERIAL</h3>
 
 <p>
 Acero inoxidable grado 316L
 (NO SE OXIDA, NO SE DECOLORA, SE PUEDE MOJAR)
 </p>
+
 </div>
 
 <div class="section">
@@ -210,6 +271,7 @@ El pago de tu producto es al motorizado, una vez te entrega tu pedido 👍
 <hr style="border:1px solid #333;">
 
 <p>
+
 <b>SI ERES DE PROVINCIA:</b><br>
 
 Los envíos se realizan mediante agencia Shalom o por Olva Courier.<br>
@@ -218,6 +280,7 @@ Los envíos se realizan mediante agencia Shalom o por Olva Courier.<br>
 El adelanto es únicamente de <b>S/20</b>.<br>
 
 El resto se completa cuando recojas tu producto para brindarte tu clave de liberación.
+
 </p>
 
 </div>
@@ -226,13 +289,28 @@ El resto se completa cuando recojas tu producto para brindarte tu clave de liber
 
 <h3>ADELANTO (YAPE)</h3>
 
-<div style="display:flex; align-items:center; justify-content:center; gap:15px; flex-wrap:wrap;">
+<div style="
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+">
 
 <div>
-<img src="QRYAPE.jpeg" style="width:170px; border-radius:10px;">
+
+<img src="QRYAPE.jpeg"
+style="
+width:170px;
+border-radius:10px;
+">
+
 </div>
 
-<div style="text-align:left; font-size:14px;">
+<div style="
+text-align:left;
+font-size:14px;
+">
 
 <b>PARA LIMA:</b><br>
 S/10 adelanto<br><br>
@@ -248,24 +326,35 @@ S/20 adelanto
 
 <b>NÚMERO DE YAPE:</b><br>
 
-<p onclick="copiarYape()" style="cursor:pointer; color:#00ff88; font-size:18px;">
+<p
+onclick="copiarYape()"
+style="
+cursor:pointer;
+color:#00ff88;
+font-size:18px;
+font-weight:bold;
+">
+
 📋 +51 947 786 855
+
 </p>
 
-<p>Walter Polo Loa (Guía Dracónica)</p>
+<p>
+Walter Polo Loa (Guía Dracónica)
+</p>
 
 <button class="btn" onclick="confirmar()">
-Enviar comprobante y contactar 💬 con Guía Dracónica por WhatsApp
-</button>
-<div style="display:flex; justify-content:flex-end; margin-top:20px;">
 
-<video autoplay muted loop playsinline
-style="
-width:140px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(255,80,0,0.4);
-">
+Enviar comprobante y contactar 💬 con Guía Dracónica por WhatsApp
+
+</button>
+
+<div class="video-box">
+
+<video autoplay muted loop playsinline>
+
 <source src="Fuego1.1.mp4" type="video/mp4">
+
 </video>
 
 </div>
@@ -299,7 +388,9 @@ Ir al TikTok Oficial
 <script>
 
 function cambiar(img){
+
   document.getElementById("mainImage").src = img.src;
+
 }
 
 function confirmar(){
@@ -307,18 +398,26 @@ function confirmar(){
   let r = confirm("¿Leíste todos los detalles de la promoción? 😊");
 
   if(r){
+
     window.location.href="https://wa.link/x4ea5q";
+
   }else{
+
     window.scrollTo({
       top:0,
       behavior:'smooth'
     });
+
   }
+
 }
 
 function copiarYape(){
+
   navigator.clipboard.writeText("947786855");
+
   alert("Número copiado");
+
 }
 
 </script>
