@@ -289,6 +289,12 @@ PROMOCIÓN POR TIEMPO LIMITADO
 
 </div>
 
+<!-- NUEVO BOTÓN ARRIBA -->
+
+<button class="btn" onclick="confirmar()">
+Contactar por WhatsApp para obtener la promoción
+</button>
+
 <div class="section">
 
 <h3>MATERIAL</h3>
@@ -471,25 +477,12 @@ function cambiar(img){
 
 function confirmar(){
 
-  let r = confirm("¿Leíste todos los detalles de la promoción? 😊");
+  /* EVENTOS FUNNEL */
+  ttq.track('AddToCart');
+  ttq.track('InitiateCheckout');
+  ttq.track('Contact');
 
-  if(r){
-
-    /* EVENTOS FUNNEL */
-    ttq.track('AddToCart');
-    ttq.track('InitiateCheckout');
-    ttq.track('Contact');
-
-    window.location.href="https://wa.link/x4ea5q";
-
-  }else{
-
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
-    });
-
-  }
+  window.location.href="https://wa.link/x4ea5q";
 
 }
 
